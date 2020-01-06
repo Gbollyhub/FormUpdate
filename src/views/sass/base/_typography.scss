@@ -1,0 +1,74 @@
+.heading{
+    color: white;
+    margin-top: 20%;
+
+    &__banner-header-text{
+     line-height: 60px;
+     font-size: $banner-header-text-size;
+     font-weight:700;
+    }
+
+    &__banner-sub-text{
+        font-size: $banner-sub-text-size;
+        font-weight:400;
+    }
+}
+
+.brand-url {
+    color: white;
+    position: absolute;
+    bottom:0;
+    left:200;
+    font-size: $banner-sub-text-size;
+    font-weight:700;
+    margin-bottom: 50px;
+    letter-spacing: 6px;
+}
+
+.Form-heading {
+    position: relative;
+    z-index: 20;
+  &__header-text{
+    color: rgb(58, 58, 58);
+   font-size: $form-header-text-size;
+   font-weight: 900;
+   overflow: hidden;
+   white-space: nowrap;
+   animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+//    border-right: .15em solid #fac7c7;
+   display: inline-block;
+   padding-right: 5px;
+  }
+
+  &__sub-text{
+    color: #fac7c7;
+ font-size: $form-sub-text-size;
+ font-weight:700;
+  }
+}
+
+.forgot-password{
+    color: #e76b6b;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all .2s;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+.new-user{
+    color: #e76b6b;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all .2s;
+    &:hover {
+        text-decoration: underline;
+    }
+}

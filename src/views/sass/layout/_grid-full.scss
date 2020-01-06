@@ -1,0 +1,61 @@
+.full-width-row {
+    @include clearfix;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+
+    @include respond(phone){ height: auto; } ;
+    @include respond(tablet){ height: auto; } ;
+ 
+    [class^="col-"] {
+
+        float:left;
+    }
+
+    .col-1-of-2-picture{
+        width: calc(100% / 2);
+        height: 100vh;   
+        display: block;
+        @include respond(phone){ display: none; } ;
+        @include respond(tablet){ display: none;  } ;
+    }
+    .col-1-of-2-form{
+        width: calc(100% / 2);
+        height: 100vh;  
+        @include respond(phone){ width: 100%; } ;
+        @include respond(tablet){ width:100%;height: auto; } ; 
+    }
+
+} 
+.picture-col {
+    position: relative;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)),
+        url('../../assets/register.png');
+    background-size: cover;
+    background-position: left;
+    padding: 50px 50px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    
+    }
+
+    .form-col {
+    background-color: rgb(255, 255, 255);
+    padding: 100px 80px;
+     position: relative;
+     @include respond(phone){ padding: 5rem 3rem; } ;
+     @include respond(tablet){ padding: 5rem 3rem; } ;
+    }
+
+    .form-col2 {
+        background-color: rgb(255, 255, 255);
+        padding: 20px 8px;
+         position: relative;
+         @include respond(phone){ padding: 5rem 3rem; } ;
+         @include respond(tablet){ padding: 5rem 3rem; } ;
+        }
+
+
