@@ -6,11 +6,13 @@
      line-height: 60px;
      font-size: $banner-header-text-size;
      font-weight:700;
+
     }
 
     &__banner-sub-text{
         font-size: $banner-sub-text-size;
         font-weight:400;
+        margin-bottom: 70px;
     }
 }
 
@@ -28,6 +30,7 @@
 .Form-heading {
     position: relative;
     z-index: 20;
+
   &__header-text{
     color: rgb(58, 58, 58);
    font-size: $form-header-text-size;
@@ -38,32 +41,43 @@
 //    border-right: .15em solid #fac7c7;
    display: inline-block;
    padding-right: 5px;
+
+   @include respond(phone){  font-size: 30px; } ;
+   @include respond(tablet){  font-size: 30px; } ;
   }
 
   &__sub-text{
     color: #fac7c7;
  font-size: $form-sub-text-size;
  font-weight:700;
+ @include respond(phone){  font-size: 25px; } ;
+ @include respond(tablet){  font-size: 25px; } ;
   }
 }
 
 .forgot-password{
+  &:link,
+  &:visited{
     color: #e76b6b;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 1px;
     text-decoration: none;
     transition: all .2s;
-    
+    display: inline-block;
     &:hover {
         text-decoration: underline;
     }
 }
+}
 
 
 .new-user{
+ &:link,
+ &:visited{
+    display: inline-block;
     color: #e76b6b;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 1px;
     text-decoration: none;
@@ -71,4 +85,5 @@
     &:hover {
         text-decoration: underline;
     }
+}
 }

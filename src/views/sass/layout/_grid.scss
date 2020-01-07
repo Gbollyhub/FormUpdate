@@ -12,6 +12,8 @@
      
         &:not(:last-child){
             margin-right: $gutter-h;
+            @include respond(phone){ margin-right: 0 } ;
+        @include respond(tablet){ margin-right: 0 } ;
         }
     }
 

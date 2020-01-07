@@ -1,10 +1,10 @@
 .form {
     position: relative;
     z-index: 20;
-
+   
     &__group{
         height: auto;
-        // margin-bottom: 0px;
+      margin-bottom: 10px;
 
     &--control {
      width: 100%;  
@@ -13,7 +13,6 @@
      font-weight: 700;
      letter-spacing: 1px;
      transition: all .2s;
-
      &:focus {
        outline: 1px solid $color-primary;
      }
@@ -31,3 +30,4 @@
   position: relative;
   z-index: 2;
 }
+

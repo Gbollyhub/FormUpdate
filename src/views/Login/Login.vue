@@ -31,9 +31,12 @@
                                 Sign in to continue.
                             </h2>
                         </div>
-                        <form action="" class="form">
+                        <v-form ref="form" @submit.prevent= "Login" class="form">
                         <div class="form__group">
                            <v-text-field
+                           :rules="[rules.required, rules.email]"
+                           v-model="emailAddress"
+                           color= "#e76b6b"
                            label="Email address"
                            outlined
                            clearable
@@ -43,28 +46,32 @@
                         
                         <div class="form__group">
                            <v-text-field
-                           type="password"
+                           :rules="[rules.required]"
+                           :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+                           v-model="password"
+                           :type="show ? 'text' : 'password'"
                            label="Password"
-                           color="#ffdbdb"
+                           color="#e76b6b"
                            outlined
-                           clearable
                            class="form__group--control"
+                           @click:append="show = !show"
                            ></v-text-field>
                         </div>
                        
-                      <a class="forgot-password" href="#"> <p>Forgot password?</p></a>
-                      <br>
-                        <Button type="submit" class="large-block-btn-red">Sign into your account</Button>
+                      <router-link class="forgot-password" to="/" > <p>Forgot password?</p></router-link>
+                      <br><br>
+                         <v-btn style="text-transform:none;font-size:17px;font-weight:700" depressed class="large-block-btn-red" dark height='60' large block  color="#ea2135" type="submit">Sign into your account</v-btn>
                         <center>
                     <router-link class="new-user" to="/register" ><p class="u-margin-top-small">New user? Create account</p></router-link>
                         </center>
                     
-                    </form>
+                    </v-form>
                     </div>
                 </div>  
             </section>
     </div>
 </template>
+
 
 <script src ="./Login.js"></script>
 

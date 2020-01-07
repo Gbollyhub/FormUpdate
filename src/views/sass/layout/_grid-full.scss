@@ -44,18 +44,18 @@
 
     .form-col {
     background-color: rgb(255, 255, 255);
-    padding: 100px 80px;
+    padding: 100px 100px;
      position: relative;
-     @include respond(phone){ padding: 5rem 3rem; } ;
-     @include respond(tablet){ padding: 5rem 3rem; } ;
+     @include respond(phone){ padding: 50px 30px; } ;
+     @include respond(tablet){ padding: 50px 30px; } ;
     }
 
     .form-col2 {
         background-color: rgb(255, 255, 255);
-        padding: 20px 8px;
+        padding: 50px 100px;
          position: relative;
-         @include respond(phone){ padding: 5rem 3rem; } ;
-         @include respond(tablet){ padding: 5rem 3rem; } ;
+         @include respond(phone){ padding: 50px 30px; } ;
+         @include respond(tablet){ padding: 50px 30px; } ;
         }
 
 
